@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+  <script src="model.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <nav>
+    <div class= "profile-logo">
+      <a href="https://istanbulegitimakademi.com/">
+        <img src="./img/1.jpg"></a>
+        <h3>Oğuzhan Muratoğlu</h3>
+    </div>
+    <ul class="head">
+        <li><a href="./index.html" style="font-size: 200%">Home Page</a></li>
+        <li><a href="./edit.html" style="font-size: 200%;">Edit Resume</a></li>
+    </ul>
+    <ul>
+        <li class="dropdown">
+            <span><i class="fa-solid fa-grip-lines" style="font-size: 300%; color: #1f407a;"></i></span>
+
+            <div class="dropdown-content">
+                <a href="./index.html">Home Page</a>
+                <a href="./edit.html">Edit Resume</a>
+            </div>                
+        </li>
+    </ul>
+</nav>
+
+  <div id="container" class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg">
+          <img src="./img/yg.jpg">
+        </div>
+        <div>
+          <h1 class="profile_name">
+            <span id="name" class="profile_name_firstName"></span>
+            <span id="lastName" class="profile_name_lastName"></span>
+          </h1>
+          <p id="title" class="profile_title"></p>
+          <p id="aboutMe" class="description profile_description"></p>
+          <a onclick="downloadPdf()" href="#" class="downloadBtn">Download Resume</a>
+        </div>
+      </div>
+    </div>
+    <div class="group-1">
+      <div class="skills">
+        <h3 class="title">Skills</h3>
+        <div id="skills" class="sub-skills"></div>
+    </div>
+
+      <div class="ref">
+        <h3 class="title">Reference</h3>
+        <div id="references"></div>
+       
+      </div>
+
+      <div class="edu">
+        <h3 class="title">Education</h3>
+      <div id="educations"></div>
+       
+      </div>
+    </div>
+      
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title">Experience</h3>
+        <div id="workExperiences"></div>
+        
+      </div>
+
+
+      <div class="certification">
+        <h3 class="title">Certification</h3>
+        <div id="certifications"></div>
+      </div>
+     
+
+      <div class="interest">
+        <h3 class="title">Interest</h3>
+        <div class="interest_items">
+          <div class="interest_item">
+            <i data-feather="music"></i>
+            <span>Music</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="book"></i>
+            <span>Books</span>
+          </div>
+          <div class="interest_item">
+            <i data-feather="map"></i>
+            <span>Travel</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <hr>
+    <div class="group-3">
+      <div class="contact">
+        <h3 class="title">My Information</h3>
+        <div class="contact_info">
+          <p id="dateOfBirth" class="description">
+          </p>
+          <p id="location" class="description">
+          </p>
+          <p id="phone" class="description">
+          </p>
+          <p id="email" class="description">
+          </p>
+        </div>
+      </div>
+      <div class="social">
+        <h3 class="title">Socials</h3>
+        <div id="socialMedias" class="social_items">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://kit.fontawesome.com/e2e65b5c6f.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script>feather.replace();</script>
+  
+  
+
+</html>
